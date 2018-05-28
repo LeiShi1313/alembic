@@ -1,0 +1,30 @@
+global:
+  english: English
+  chinese: 中文
+  CompanyName: Suzhou Caosen Display Prop Co., Ltd.
+  Home: Home
+  About: About
+  Products: Products
+  News: News
+  Solutions: Solutions
+  Business: Business
+  Careers: Careers
+  Contact: Contact
+
+Contact:
+  Title: Contact Us
+  Address: Add
+  AddressName: Zhou Song harbor town of Kunshan City Road 385
+  Zip: Zip
+  ZipName: "215345"
+  Tel: Tel
+  TelName: 0512-55008666
+  Fax: Fax
+  FaxName: 0512-55009666
+  Email: E-mail
+  EmailName: sz_gm@caosen.com
+
+Business:
+  Title: Business
+  Scope: Scope
+  Marketing: Marketing

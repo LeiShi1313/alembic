@@ -1,0 +1,30 @@
+global:
+  english: English
+  chinese: 中文
+  CompanyName: 苏州曹森展示道具有限公司
+  Home: 主页
+  About: 关于
+  Products: 产品
+  News: 新闻
+  Solutions: 解决方案
+  Business: 经营范围
+  Careers: 招贤纳士
+  Contact: 联系我们
+
+Contact:
+  Title: 联系我们
+  Address: 地址
+  AddressName: 昆山市周市镇宋家港路385号
+  Zip: 邮编
+  ZipName: "215345"
+  Tel: 电话
+  TelName: 0512-55008666
+  Fax: 传真
+  FaxName: 0512-55009666
+  Email: 邮箱
+  EmailName: sz_gm@caosen.com
+
+Business:
+  Title: 经营范围
+  Scope: 经营范围
+  Marketing: 营销渠道

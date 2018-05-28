@@ -6,13 +6,25 @@
       {% if item[1] contains '://' %}
         {% assign url = item[1] %}
       {% else %}
-        {% assign url = item[1] | relative_url %}
+        {% if site.lang == 'en' %}
+          {% assign url = item[1] | relative_url %}
+        {% else %}
+          {% assign url = item[1] | relative_url %}
+        {% endif %}
       {% endif %}
-
       <li class="item  item--nav{% if item[1] == page.url %}  item--current{% endif %}">
-        <a href="{{ url }}">{{ item[0] }}</a>
+        <a href="{{ url }}">{% t global.{{item[0]}} %}</a>
       </li>
     {% endfor %}
+    <li class="item item--nav">
+      {% if site.lang == "en" %}
+        {% capture zh_link %}{{ site.baseurl_root }}/zh{{ page.url  }}{% endcapture %}
+        <a href="{{ zh_link }}">{% t global.chinese %}</a>
+      {% else %}
+        {% capture en_link %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+        <a href="{{ en_link }}">{% t global.english %}</a>
+      {% endif %}
+    </li>
   </ul>
 </nav>
 {% else %}
