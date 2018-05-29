@@ -3,19 +3,16 @@ layout: default
 ---
 
 <main class="main  container">
-  <main class="main container">
-    <article class="article  article--page  content  typeset">
+    <article class="article  article--page  typeset">
 
       <h1>{% t page.title %}</h1>
 
       {{ content }}
 
     </article>
-    <section class="section section--description">
+    <section class="section  section--category-index">
       <img src="{{ page.img }}"/>
     </section>
-
-  </main>
   {% if page.aside == true %}{% include site-aside.html align="expand" %}{% endif %}
 
 </main>

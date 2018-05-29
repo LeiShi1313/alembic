@@ -1,13 +1,10 @@
 <nav class="nav  nav--categories">
   <ul class="list  list--categories">
-    <li class="item  item--category">
-      <a> {{ site.business }}</a>
-    </li>
     {% for item in site.business %}
       <li class="item  item--category">
-        {% capture url %}{{ site.baseurl }}{{ page.url }}{{ item.url }}{% endcapture %}
-        <a href="{{ url }}">{% t Business.Scope %}</a>
-      </li>
+        {% capture url %}{{ site.baseurl }}{{ item.url }}{% endcapture %}
+        <a href="{{ url }}">{% t Business.{{ item.title }} %}</a>
+      </li> 
     {% endfor %}
   </ul>
 </nav>

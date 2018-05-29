@@ -1,4 +1,1 @@
----
-url: marketing
-category: business
----
+{% include figure.html image="/assets/marketing_en.jpg" %}

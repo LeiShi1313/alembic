@@ -1,5 +1,5 @@
 ---
-title: Business.Title
+title: Scope
 layout: business
 aside: true
 ---

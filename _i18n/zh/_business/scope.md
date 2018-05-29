@@ -1,4 +1,2 @@
----
-url: scope
-category: business
----
+<img style="float: left;padding-right: 10%" src="/assets/scope_zh.jpg">
+##### 公司主营展示道具、灯具、机电设备及配件的销售；从事木制品、金属制品（不含贵金属）、塑料制品的生产、加工、制造，提供商业空间设计服务；销售自产产品；自营和代理各类商品的进出口业务。
