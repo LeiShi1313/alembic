@@ -23,6 +23,11 @@
       <h3>{% t Business.Title %}</h3>
       {% include nav-business.html %}
     </section>
+  
+  {% elsif page.layout == "solutions" %}
+    <section class="section  section--bottom">
+      <img src="{{ page.img }}"/>
+    </section>
 
   {% endif %}
 </aside>
