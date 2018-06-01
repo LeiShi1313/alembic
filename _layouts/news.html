@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<main class="main  container">
+
+  <div class="content">
+
+    {% assign c = content | strip_newlines %}
+    <article class="article  article--page  typeset">
+      {% if c != "" %}
+      <h3>{{ page.title }}</h3>
+      {% endif %}
+      {{ content }}
+
+    </article>
+
+    {% if c == "" %}
+      {% include post-news.html %}
+    {% endif %}
+
+  </div>
+
+  {% if page.aside == true %}{% include site-aside.html align="left" %}{% endif %}
+
+</main>
+

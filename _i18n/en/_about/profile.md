@@ -1,0 +1,12 @@
+{% include figure.html image="/assets/about_profile_pic1.jpg" position="left" %}
+
+Caosen Display is a private business entity of sole proprietorship which specializes in the design, development and manufacturing of display prop, shop decoration and display prop installation engineering management, and management of shop space planning project and engages in modern management of enterprise based on service throughout the industrial chain.
+
+Formerly known as Xinlian Furniture Factory in Dianshan Lake Town, Kunshan, Caosen Display was founded in Dianshan Lake Town, Kunshan, Jiangsu in August 1985. In 1996, Shanghai Production Base was set up due to production scale expansion and Shanghai Caosen Wood Co., Ltd. was also formally established. In August 2012, Kunshan Production Base as well as Kunshan Caosen Wood Co., Ltd. was established. Based on the current two major production bases, our company was restructured as Suzhou Caosen Display Prop Co., Ltd. in 2012 to officially launch Caosen display brand to the market. Through more than 3 decades’ hard work of the board of directors and all our employees, our company has turned from a 20 personnel-based workshop into a business entity with two major production bases in Shanghai and Kunshan. Caosen has a registered capital of over RMB 25 million, total investment of Yuan 35 million and total asset of over RMB 80 million. Our company has a workshop of over 25000 square meters out of a total floor space of over 29000 square meters. Our factory enjoys beautiful environment and covers a green area of 15%. 
+
+Since establishment, Caosen Display has been adhering to the corporate concept of “speed, integrity, technique and professionalism” and following the objective of “professionalism leads to devotion”, so as to serve the customers through first-rate quality. The introduction of modern production equipment and technology from Italy and Germany, strict production process, modern management and excellent after-sales service allow us to have won general approval of our customers. Our key product such as display case and showing stand for shops and other product series have been applied to world-famous brands and exported to Europe, America and other countries.
+
+Looking into the future, Caosen is driven by innovation and guided by a strong market orientation to operate in a devoted, prudent and professional way and will endeavor to develop toward a higher, competitive and farther objective.
+
+
+{% include figure.html image="/assets/about_profile_pic00.jpg" position="left" %}

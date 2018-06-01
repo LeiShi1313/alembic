@@ -1,0 +1,28 @@
+{% for category in site.categories %}
+  {% assign category_name = category | first %}
+  {% if category_name == "Company" or category_name == "Industry" %}
+  <section class="section  typeset">
+    <h3 id="{{ category_name | slugify }}">{% t News.{{category_name}} %}</h3>
+    <ul class="list  list--posts">
+      {% for page in site.categories[category_name] %}
+        {% assign has_categories = true %}
+        <li class="item  item--post">
+          <article class="article  article--post  typeset">
+            <h5><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h5>
+            <small class="small  post-meta">
+              <time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date_to_string }}</time>
+            </small>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+    {% unless forloop.last %}<hr/>{% endunless %}
+  </section>
+  {% endif %}
+{% endfor %}
+
+{% if has_categories != true %}
+  <section class="section  typeset">
+    <p>There are no categorised posts</p>
+  </section>
+{% endif %}

@@ -127,6 +127,26 @@ body {
   }
 }
 
+.culture {
+  table {
+    border-collapse: collapse;
+  }
+  td:first-child, td:first-child+td {
+    border: solid;
+    border-width: 1px 0;
+  }
+  tr:first-child {
+    td {
+      border-top: none;
+    }
+  }
+  tr:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
+}
+
 .header,
 .feature,
 .footer {

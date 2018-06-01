@@ -29,5 +29,18 @@
       <img src="{{ page.img }}"/>
     </section>
 
+  {% elsif page.layout == "news" %}
+    <section class="section  section--category-index">
+      <h3>{% t News.Title %}</h3>
+      {% include nav-news.html %}
+    </section>
+
+  {% elsif page.layout == "about" %}
+    <section class="section  section--category-index">
+      <h3>{% t About.Title %}</h3>
+      {% include nav-about.html %}
+    </section>
+  
+  
   {% endif %}
 </aside>

@@ -67,6 +67,9 @@ collections:
   business:
     title: Business
     output: true
+  about:
+    title: About
+    output: true
 
 # 6. Jekyll collections settings
 defaults:

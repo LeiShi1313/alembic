@@ -1,5 +1,5 @@
 ---
-title: About
+title: Profile
 layout: about
 aside: true
 ---
