@@ -1,6 +1,23 @@
----
-title: Customer
-layout: about
-aside: true
----
-
+{% include figure.html image="/assets/customer_0.jpg" position="left" %}
+{% include figure.html image="/assets/customer_1.jpg" position="left" %}
+{% include figure.html image="/assets/customer_2.jpg" position="left" %}
+{% include figure.html image="/assets/customer_3.jpg" position="left" %}
+{% include figure.html image="/assets/customer_4.jpg" position="left" %}
+{% include figure.html image="/assets/customer_5.jpg" position="left" %}
+{% include figure.html image="/assets/customer_6.jpg" position="left" %}
+{% include figure.html image="/assets/customer_7.jpg" position="left" %}
+{% include figure.html image="/assets/customer_8.jpg" position="left" %}
+{% include figure.html image="/assets/customer_9.jpg" position="left" %}
+{% include figure.html image="/assets/customer_10.jpg" position="left" %}
+{% include figure.html image="/assets/customer_11.jpg" position="left" %}
+{% include figure.html image="/assets/customer_12.jpg" position="left" %}
+{% include figure.html image="/assets/customer_13.jpg" position="left" %}
+{% include figure.html image="/assets/customer_14.jpg" position="left" %}
+{% include figure.html image="/assets/customer_15.jpg" position="left" %}
+{% include figure.html image="/assets/customer_16.jpg" position="left" %}
+{% include figure.html image="/assets/customer_17.jpg" position="left" %}
+{% include figure.html image="/assets/customer_18.jpg" position="left" %}
+{% include figure.html image="/assets/customer_19.jpg" position="left" %}
+{% include figure.html image="/assets/customer_20.jpg" position="left" %}
+{% include figure.html image="/assets/customer_21.jpg" position="left" %}
+{% include figure.html image="/assets/customer_22.jpg" position="left" %}
