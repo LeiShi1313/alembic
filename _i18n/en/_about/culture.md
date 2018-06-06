@@ -1,4 +1,4 @@
-<table >
+<table class="culture culture--inner">
   <colgroup>
     <col width="15%" />
     <col width="55%" />

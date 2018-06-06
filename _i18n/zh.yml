@@ -1,6 +1,7 @@
 global:
   english: English
   chinese: 中文
+  Name: 曹森 
   CompanyName: 苏州曹森展示道具有限公司
   Home: 主页
   About: 关于
@@ -10,6 +11,16 @@ global:
   Business: 经营范围
   Careers: 招贤纳士
   Contact: 联系我们
+
+Home:
+  Title: 主页
+
+Products:
+  Title: 产品
+  Name: 产品名称
+  Number: 产品编号
+  Time: 上架时间
+  Exclusive shop series: 专卖店系列
 
 Contact:
   Title: 联系我们

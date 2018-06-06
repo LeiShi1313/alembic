@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<main class="main  container">
+  <div class="container">
+    {% assign c = content | strip_newlines %}
+    {% if c != "" %}
+    <!-- <div class="row"> -->
+      <!-- <h3>{{ page.title }}</h3> -->
+    <!-- </div> -->
+    <div class="row">
+      <div class="col-md-6">
+        <div id="wrapper">
+          <!-- <h1>Simple Image Slider</h1> -->
+          <!-- <h2>A Pen by <a href="http://www.andrecortellini.com" target="_blank">André Cortellini</a></h2> -->
+          <div id="slider-wrap">
+            <ul id="slider">
+              {% for img in page.images %}
+              <li>
+                <img src="{{img}}" />
+              </li>
+              {% endfor %}
+            </ul>
+            <!--controls-->
+            <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
+            <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
+            <div id="counter"></div>
+            <div id="pagination-wrap">
+              <ul>
+              </ul>
+            </div>
+          </div>
+            <!--controls-->  
+        </div>
+      </div>
+      <div class="col-md-6 typeset">
+        <div class="row">
+          <h4>{% t Products.Name %}: {{ page.name }}</h4>
+        </div>
+        <div class="row">
+          <h4>{% t Products.Number %}: {{ page.number }}</h4>
+        </div>
+        <div class="row">
+          <h4>{% t Products.Time %}: {{ page.time }}</h4>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    <div class="row">
+      {{ content }}
+    </div>
+    {% if c == "" %}
+      {% include post-products.html %}
+    {% endif %}
+  </div>
+
+
+  {% if page.aside == true %}{% include site-aside.html align="left" %}{% endif %}
+
+</main>

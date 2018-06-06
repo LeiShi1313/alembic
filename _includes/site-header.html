@@ -1,10 +1,9 @@
 <header class="header">
-  <div class="container">
-    {% if site.logo %}{% include site-logo.html %}{% endif %}
+    <div class="container">
+        {% if site.logo %}{% include site-logo.html %}{% endif %} {% include nav-header.html %}
+    </div>
 
-    {% include nav-header.html %}
-  </div>
-
-  {% include site-feature.html %}
-
+    {% if page.url != '/' %}
+    {% include site-feature.html %}
+    {% endif %}
 </header>

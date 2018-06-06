@@ -13,8 +13,8 @@
       {% seo title=false %}
 
       {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
-      <title>{{ collectiondata.title }} - {{ site.title }}</title>
-      <meta property="og:title" content="{{ collectiondata.title }}">
+      <title>{% t {{collectiondata.title}} %} - {% t global.Name %}</title>
+      <meta property="og:title" content="{% t collectiondata.title %}">
       <meta name="description" content="{{ collectiondata.description }}">
       <meta property="og:description" content="{{ collectiondata.description }}">
     {% else %}
@@ -32,10 +32,25 @@
 
     {% if site.avatarurl %}{% include site-favicons.html %}{% endif %}
 
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <!-- Bootstrap grid only -->
+    <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
     {% if site.google_analytics %}{% include site-analytics.html %}{% endif %}
+
+    <!-- For slider -->
+    {% if page.url contains "products" %}
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+    <script async src="/assets/scripts/slider.js"></script>
+    {% endif %}
   </head>
 
-  <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
+  <body id="layout" class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
     {% include site-icons.svg %}
 
     {% include site-header.html %}
