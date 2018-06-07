@@ -4,7 +4,7 @@
     {% if item.first contains "series" %}
     {% capture url %}{{ site.baseurl }}/products/{% endcapture %} 
       <li class="item  item--category">
-        <a href="{{url}}#{{ item | first | slugify }}">{% t Products.{{ item | first }} %}</a>
+        <a href="{{url}}{{ item | first | slugify }}">{% t Products.{{ item | first }} %}</a>
       </li>
     {% endif %}
     {% endfor %}

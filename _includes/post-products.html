@@ -1,6 +1,11 @@
+{% if page.filter != blank %}
+{% assign filter = page.filter %}
+{% else %}
+{% assign filter = "series" %}
+{% endif %}
 {% for category in site.categories %}
   {% assign category_name = category | first %}
-  {% if category_name contains "series" %}
+  {% if category_name contains filter %}
   <section class="section  typeset">
     <h3 id="{{ category_name | slugify }}">{% t Products.{{category_name}} %}</h3>
     <ul class="list  list--posts">

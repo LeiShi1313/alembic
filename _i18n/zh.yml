@@ -20,7 +20,15 @@ Products:
   Name: 产品名称
   Number: 产品编号
   Time: 上架时间
-  Exclusive shop series: 专卖店系列
+  Exclusive-shop-series: 专卖店系列
+  Cashier-desk-series: 收银台系列
+  Metal-frame-series: 金属展架系列
+  Household-display-series: 家居展示系列
+  Wall-frid-series: 墙体槽板系列
+  Nakajima-series: 中岛系列
+  Supermarket-shelves-series: 超市货架系列
+  Cosmetic-showcase-series: 化妆品展柜系列
+  Acrylic-photo-frame: 压克力展架系列
 
 Contact:
   Title: 联系我们
@@ -60,3 +68,6 @@ About:
   Culture: 企业文化
   Honor: 企业资质
   Customer: 主要客户
+
+
+Posts: Posts_占位

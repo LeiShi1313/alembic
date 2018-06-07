@@ -20,7 +20,15 @@ Products:
   Name: Name
   Number: Number
   Time: Time
-  Exclusive shop series: Exclusive shop series
+  Exclusive-shop-series: Exclusive shop series
+  Cashier-desk-series: Cashier desk series
+  Metal-frame-series: Metal frame series
+  Household-display-series: Household display series
+  Wall-frid-series: Wall frid series
+  Nakajima-series: Nakajima series
+  Supermarket-shelves-series: Supermarket shelves series
+  Cosmetic-showcase-series: Cosmetic showcase series
+  Acrylic-photo-frame: Acrylic photo frame
 
 Contact:
   Title: Contact Us
@@ -60,3 +68,6 @@ About:
   Culture: Company Culture
   Honor: Honor
   Customer: Main Customers
+
+
+Posts: Posts_Placeholder

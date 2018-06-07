@@ -42,7 +42,7 @@ function slide(createli=false) {
 	var autoSlider = setInterval(slideRight, 5000);
 	
     //for each slide 
-    if (createli) {
+    if (createli && totalSlides > 1) {
 	    $.each($('#slider-wrap ul li'), function() { 
 	       //set its color
 	       var c = $(this).attr("data-color");
@@ -100,12 +100,25 @@ function slideRight(){
  //*> OPTIONAL SETTINGS
 ************************/
 function countSlides(){
-    $('#counter').html(pos+1 + ' / ' + totalSlides);
+	if (totalSlides == 1) {
+		return;
+	}
+	$('#counter').html(pos+1 + ' / ' + totalSlides);
 }
 
 function pagination(){
+	if (totalSlides == 1) {
+		return;
+	}
     $('#pagination-wrap ul li').removeClass('active');
-    $('#pagination-wrap ul li:eq('+pos+')').addClass('active');
+	$('#pagination-wrap ul li:eq('+pos+')').addClass('active');
+	for (var i = 0; i < totalSlides; i++) {
+		if (pos == i) {
+			$('#number-'+(i+1)).show();
+		} else {
+			$('#number-'+(i+1)).hide();
+		}
+	}
 }
 
 	

@@ -4,6 +4,8 @@ layout: default
 
 <main class="main  container">
   <div class="container">
+    <h3>{{ page.url }}</h3>
+    <h3>{{ page.filter }}</h3>
     {% assign c = content | strip_newlines %}
     {% if c != "" %}
     <!-- <div class="row"> -->
@@ -38,9 +40,11 @@ layout: default
         <div class="row">
           <h4>{% t Products.Name %}: {{ page.name }}</h4>
         </div>
-        <div class="row">
-          <h4>{% t Products.Number %}: {{ page.number }}</h4>
+        {% for number in page.numbers %}
+        <div class="row" id="number-{{ forloop.index }}">
+          <h4>{% t Products.Number %}: {{ number }}</h4>
         </div>
+        {% endfor %}
         <div class="row">
           <h4>{% t Products.Time %}: {{ page.time }}</h4>
         </div>
