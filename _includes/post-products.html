@@ -1,30 +1,37 @@
-{% if page.filter != blank %}
-{% assign filter = page.filter %}
+{% if page.filter != blank %} 
+{% assign filter = page.filter %} 
 {% else %}
 {% assign filter = "series" %}
 {% endif %}
-{% for category in site.categories %}
-  {% assign category_name = category | first %}
-  {% if category_name contains filter %}
-  <section class="section  typeset">
-    <h3 id="{{ category_name | slugify }}">{% t Products.{{category_name}} %}</h3>
-    <ul class="list  list--posts">
-      {% for page in site.categories[category_name] %}
+<section class="section  typeset">
+  <div class="container" id="products">
+    <div class="row">
+    {% for category in site.categories %}
+    {% assign category_name = category | first %}
+      {% if category_name contains filter %}
+        {% for page in site.categories[category_name] %}
         {% assign has_categories = true %}
-        <li class="item  item--post">
-          <article class="article  article--post  typeset">
-            <h5><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h5>
-            <small class="small  post-meta">
-              <time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date_to_string }}</time>
-            </small>
-          </article>
-        </li>
-      {% endfor %}
-    </ul>
-    {% unless forloop.last %}<hr/>{% endunless %}
-  </section>
-  {% endif %}
-{% endfor %}
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div id="products--view">
+            <div class="row"> 
+              <div class="col-md-12">
+                <img src="{{ page.images | first}}" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h5><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</section>
+
 
 {% if has_categories != true %}
   <section class="section  typeset">

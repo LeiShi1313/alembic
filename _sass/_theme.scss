@@ -478,6 +478,7 @@ pre code {
   }
 }
 
+// For products detail slider
 #wrapper {
 	width:100%;
 	// margin:50px auto;
@@ -601,5 +602,31 @@ pre code {
     right:35px; 
     width:auto;
     position:absolute;
+  }
+}
+
+// For products view
+#products {
+  .col-md-3 {
+    padding-top: 10px;
+  }
+  &--view {
+    .row {
+      margin: 0;
+    }
+    div:first-child {
+      // border-style: solid;
+      // border-width: 0.1px;
+      div {
+        margin: 10px 10px 10px 10px;
+      }
+    }
+    div:nth-child(2) {
+      margin-top: -15px;
+      text-align: center;
+      h5 {
+        padding-top: 0;
+      }
+    }
   }
 }
