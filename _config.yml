@@ -19,6 +19,7 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - caosen.gemspec
+- generate.py
 
 # 2. Installed Gems
 plugins:
