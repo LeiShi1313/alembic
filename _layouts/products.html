@@ -2,64 +2,94 @@
 layout: default
 ---
 
-<main class="main  container">
-  <div class="container">
-    <h3>{{ page.url }}</h3>
-    <h3>{{ page.filter }}</h3>
+<div class="container">
+  <div class="row">
     {% assign c = content | strip_newlines %}
+    <div class="col-lg-2 col-md-3 col-sm-12">
+      <h3>{% t Products.Title %}</h3>
+      {% include nav-products.html %}
+    </div> 
+    <div class="col-lg-10 col-md-9 col-sm-12">
     {% if c != "" %}
-    <!-- <div class="row"> -->
-      <!-- <h3>{{ page.title }}</h3> -->
-    <!-- </div> -->
-    <div class="row">
-      <div class="col-md-6">
-        <div id="wrapper">
-          <!-- <h1>Simple Image Slider</h1> -->
-          <!-- <h2>A Pen by <a href="http://www.andrecortellini.com" target="_blank">André Cortellini</a></h2> -->
-          <div id="slider-wrap">
-            <ul id="slider">
-              {% for img in page.images %}
-              <li>
-                <img src="{{img}}" />
-              </li>
-              {% endfor %}
-            </ul>
-            <!--controls-->
-            <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
-            <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
-            <div id="counter"></div>
-            <div id="pagination-wrap">
-              <ul>
+      <h3>{{ page.url }}</h3>
+      <h3>{{ page.filter }}</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="wrapper">
+            <!-- <h1>Simple Image Slider</h1> -->
+            <!-- <h2>A Pen by <a href="http://www.andrecortellini.com" target="_blank">André Cortellini</a></h2> -->
+            <div id="slider-wrap">
+              <ul id="slider">
+                {% for img in page.images %}
+                <li>
+                  <img src="{{img}}" />
+                </li>
+                {% endfor %}
               </ul>
+              <!--controls-->
+              <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
+              <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
+              <div id="counter"></div>
+              <div id="pagination-wrap">
+                <ul>
+                </ul>
+              </div>
+            </div>
+              <!--controls-->  
+          </div>
+        </div>
+        <div class="col-md-6 typeset">
+          <div class="row">
+            <h4>{% t Products.Name %}: {{ page.name }}</h4>
+          </div>
+          {% for number in page.numbers %}
+          <div class="row" id="number-{{ forloop.index }}">
+            <h4>{% t Products.Number %}: {{ number }}</h4>
+          </div>
+          {% endfor %}
+          <div class="row">
+            <h4>{% t Products.Time %}: {{ page.time }}</h4>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      {% if page.filter != blank %} 
+      {% assign filter = page.filter %} 
+      {% else %}
+      {% assign filter = "series" %}
+      {% endif %}
+      <div class="row" id="products">
+      {% for category in site.categories %}
+      {% assign category_name = category | first %}
+        {% if category_name contains filter %}
+          {% for page in site.categories[category_name] %}
+          {% assign has_categories = true %}
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div id="products--view">
+              <div class="row"> 
+                <div class="col-md-12">
+                  <img src="{{ page.images | first}}" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h5><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h5>
+                </div>
+              </div>
             </div>
           </div>
-            <!--controls-->  
-        </div>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
       </div>
-      <div class="col-md-6 typeset">
-        <div class="row">
-          <h4>{% t Products.Name %}: {{ page.name }}</h4>
-        </div>
-        {% for number in page.numbers %}
-        <div class="row" id="number-{{ forloop.index }}">
-          <h4>{% t Products.Number %}: {{ number }}</h4>
-        </div>
-        {% endfor %}
-        <div class="row">
-          <h4>{% t Products.Time %}: {{ page.time }}</h4>
-        </div>
+
+
+      {% if has_categories != true %}
+      <div class="row">
+        <p>There are no categorised posts</p>
       </div>
-    </div>
+      {% endif %}
     {% endif %}
-    <div class="row">
-      {{ content }}
     </div>
-    {% if c == "" %}
-      {% include post-products.html %}
-    {% endif %}
   </div>
-
-
-  {% if page.aside == true %}{% include site-aside.html align="left" %}{% endif %}
-
-</main>
+</div>
