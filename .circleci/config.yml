@@ -41,10 +41,7 @@ jobs:
       - store_artifacts: 
           path: run-results/
           destination: run-results
-      - persist_to_workspace:
-          root: ~/caosen/_site 
-          paths: 
-            - caosen
+
   deploy:
     docker:
       - image: circleci/python:2.7
@@ -57,7 +54,7 @@ jobs:
           command: sudo apt-get install rsync
       - run:
           name: Deploy to Pi
-          command: rsync -r ./_site pi@leishi.ddns.net:/home/pi/caosen_prod
+          command: rsync -r --info=progress2 ./_site pi@leishi.ddns.net:/home/pi/caosen_prod
 
 workflows:
   version: 2
