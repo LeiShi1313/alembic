@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.1
-    working_directory: ~/circleci-docs
+    working_directory: ~/caosen
     environment:
       - JEKYLL_ENV=production
       - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -42,16 +42,16 @@ jobs:
           path: run-results/
           destination: run-results
       - persist_to_workspace:
-          root: ~/circleci-docs/_site 
+          root: ~/caosen/_site 
           paths: 
             - caosen
   deploy:
     docker:
       - image: circleci/python:2.7
-    working_directory: ~/circleci-docs  
+    working_directory: ~/caosen  
     steps:
       - attach_workspace:
-          at: ~/circleci-docs/_site 
+          at: ~/caosen/_site 
       - run:
           name: Install async
           command: sudo apt-get install rsync
