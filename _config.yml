@@ -20,6 +20,7 @@ exclude:
 - Gemfile.lock
 - caosen.gemspec
 - generate.py
+- vendor
 
 # 2. Installed Gems
 plugins:
